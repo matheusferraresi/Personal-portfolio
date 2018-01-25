@@ -1,0 +1,36 @@
+=container($width: 92%, $max-width: 55rem)
+    width: $width
+    margin: 0 auto
+    max-width: $max-width
+    box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.15)
+
+=clearfix
+    content: ''
+    display: block
+    clear: both
+
+=mq($width: 50em)
+    @media (min-width: $width)
+        @content
+
+=unnordered-list
+    list-style: none
+    margin: 0
+    padding: 0
+
+=blue-box
+    @include container
+    background: $accent    
+    background-image: url(../img/header_bg.png)
+    background-position: center
+    background-size: cover
+    align-items: center
+    border-radius: 10px 10px 0px 0px
+    color: $white
+
+=white-box
+    @include container
+    background: $white
+    padding: 1em
+    border-radius: 0px 0px 10px 10px
+

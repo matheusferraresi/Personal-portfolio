@@ -1,0 +1,37 @@
+.hero
+    @include blue-box
+    display: flex
+    flex-direction: column
+
+.avatar
+    width: 50%
+    height: auto
+    border: 3px solid $white
+    box-shadow: 0 2px 3px 1px rgba(0,0,0,.25)
+    margin-top: 3em
+    transition: all ease-in-out 500ms
+    
+    &:hover
+        transform: translateY(-10px)
+        box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.20)
+
+.hero-title
+    text-align: center
+    font-size: 3em
+    margin-bottom: 0
+
+.hero-subtitle
+    @include unnordered-list
+    display: flex
+    
+    h3
+        font-weight: $fw-n
+
+.hero-social
+    @include unnordered-list
+    display: flex
+    margin-bottom: 3em
+    
+    img
+        width: 3em
+        height: auto

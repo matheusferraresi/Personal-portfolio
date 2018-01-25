@@ -1,0 +1,36 @@
+.about-me
+    @include white-box
+    color: $light-grey
+    font-family: 'Roboto', serif
+    font-weight: $fw-n
+
+    .subtitle
+    color: $dark-grey
+    font-size: 0.9em
+        
+    span
+        color: $accent
+
+    p        
+        font-size: 1.1em
+        line-height: 1.5
+    
+.my-data-list
+    @include unnordered-list
+    display: grid
+    grid-template-columns: repeat(2, .5fr)
+    grid-gap: 1em
+    margin: 1em
+    color: $light-grey
+
+    .list-title
+        color: $dark-grey
+        display: inline-block
+
+    a
+        color: $accent
+        text-decoration: none
+        transition: ease-in-out 300ms
+
+        &:hover
+            color: #ff9800    
