@@ -18,7 +18,7 @@
 .my-data-list
     @include unnordered-list
     display: grid
-    grid-template-columns: repeat(2, .5fr)
+    grid-template-columns: minmax(5em, 10em) auto
     grid-gap: 1em
     margin: 1em
     color: $light-grey
@@ -26,6 +26,7 @@
     .list-title
         color: $dark-grey
         display: inline-block
+        max-width: 10em
 
     a
         color: $accent

@@ -40,9 +40,12 @@ img {
   background: #2695F3;
   padding: 1em;
   color: #fff;
-  position: relative;
+  position: fixed;
+  width: 100%;
   font-size: 1.2em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  top: 0;
+  z-index: 10; }
   .header p {
     margin: 0; }
 
@@ -59,8 +62,8 @@ img {
   -o-transition: all ease-in-out 250ms;
   transition: all ease-in-out 250ms;
   font-size: 0.9em;
-  -webkit-box-shadow: -5px 4px 8px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: -5px 4px 8px 0 rgba(0, 0, 0, 0.25); }
+  -webkit-box-shadow: -5px 5px 8px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: -5px 5px 8px 0 rgba(0, 0, 0, 0.25); }
   .nav-main ul {
     list-style: none;
     margin: 0;
@@ -165,7 +168,8 @@ img {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-top: 5em; }
 
 .avatar {
   width: 50%;
@@ -207,9 +211,25 @@ img {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 3em; }
-  .hero-social img {
+  .hero-social li {
     width: 3em;
-    height: auto; }
+    height: 3em;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 .5em;
+    -webkit-transition: all ease-in-out 300ms;
+    -o-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms; }
+    .hero-social li:hover {
+      -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2); }
+  .hero-social img {
+    width: 2em;
+    height: 2em;
+    -webkit-transition: all ease-in-out 300ms;
+    -o-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+    margin: .5em auto; }
 
 .about-me {
   width: 92%;
@@ -236,13 +256,14 @@ img {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, 0.5fr);
+  grid-template-columns: minmax(5em, 10em) auto;
   grid-gap: 1em;
   margin: 1em;
   color: #ACACAC; }
   .my-data-list .list-title {
     color: #262626;
-    display: inline-block; }
+    display: inline-block;
+    max-width: 10em; }
   .my-data-list a {
     color: #2695F3;
     text-decoration: none;

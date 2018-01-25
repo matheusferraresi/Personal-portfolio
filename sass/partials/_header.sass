@@ -2,9 +2,12 @@
     background: $accent
     padding: 1em
     color: $white
-    position: relative
+    position: fixed
+    width: 100%
     font-size: 1.2em
     margin-bottom: 1em
+    top: 0
+    z-index: 10
 
     p
         margin: 0
@@ -20,7 +23,7 @@
     opacity: 0
     transition: all ease-in-out 250ms
     font-size: 0.9em
-    box-shadow: -5px 4px 8px 0 rgba(0,0,0,0.25)
+    box-shadow: -5px 5px 8px 0 rgba(0,0,0,0.25)
 
     ul
         @include unnordered-list
