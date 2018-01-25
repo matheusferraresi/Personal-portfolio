@@ -2,6 +2,88 @@
     background: $accent
     padding: 1em
     color: $white
-    
+    position: relative
+    font-size: 18px
+    margin-bottom: 1em
+
     p
         margin: 0
+
+.nav-main
+    position: absolute
+    top: 100%
+    right: -100%
+    background: $accent
+    width: 20em
+    height: 100vh
+    opacity: 0
+    transition: all ease-in-out 250ms
+    font-size: 14px
+
+    ul
+        display: flex
+        flex-direction: column
+        margin: 1.5em 0 0 2em !important
+
+    a
+        width: auto
+        padding: 1em
+        display: inline-block
+        color: $white
+        opacity: .5
+        text-decoration: none
+        position: relative
+
+        &::after
+            margin-top: .5em
+            position: absolute
+            content: ''
+            display: block
+            height: 2px
+            background: $white
+            left: 50%
+            transform: translateX(-50%)
+            transition: width 500ms
+            width: 0
+
+        &:hover
+            opacity: 1
+
+            &::after
+                width: 2em
+                opacity: 1
+
+    &.is-open
+        right: 0
+        opacity: 1
+            
+.nav-toggle
+    display: block
+    padding: 1em
+    position: absolute
+    right: 0.3em
+    top: 0.5em
+    cursor: pointer
+
+.hamburger, .hamburger::before, .hamburger::after
+    content: ''
+    display: block
+    width: 1.5em
+    height: 3px
+    background: $white
+    transition: all ease-in-out 250ms
+
+.hamburger::before
+    transform: translateY(-6px);
+
+.hamburger::after
+    transform: translateY(3px);
+
+.hamburger.is-open
+    transform: rotate(45deg)
+
+    &::after
+        transform: rotate(-90deg) translateX(2px)
+
+    &::before
+        opacity: 0

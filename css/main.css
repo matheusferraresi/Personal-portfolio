@@ -1,10 +1,110 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+.unordered-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 .header {
   background: #2695F3;
   padding: 1em;
-  color: #fff; }
+  color: #fff;
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 1em; }
   .header p {
     margin: 0; }
+
+.nav-main {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  background: #2695F3;
+  width: 20em;
+  height: 100vh;
+  opacity: 0;
+  -webkit-transition: all ease-in-out 250ms;
+  -o-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
+  font-size: 14px; }
+  .nav-main ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 1.5em 0 0 2em !important; }
+  .nav-main a {
+    width: auto;
+    padding: 1em;
+    display: inline-block;
+    color: #fff;
+    opacity: .5;
+    text-decoration: none;
+    position: relative; }
+    .nav-main a::after {
+      margin-top: .5em;
+      position: absolute;
+      content: '';
+      display: block;
+      height: 2px;
+      background: #fff;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      -webkit-transition: width 500ms;
+      -o-transition: width 500ms;
+      transition: width 500ms;
+      width: 0; }
+    .nav-main a:hover {
+      opacity: 1; }
+      .nav-main a:hover::after {
+        width: 2em;
+        opacity: 1; }
+  .nav-main.is-open {
+    right: 0;
+    opacity: 1; }
+
+.nav-toggle {
+  display: block;
+  padding: 1em;
+  position: absolute;
+  right: 0.3em;
+  top: 0.5em;
+  cursor: pointer; }
+
+.hamburger, .hamburger::before, .hamburger::after {
+  content: '';
+  display: block;
+  width: 1.5em;
+  height: 3px;
+  background: #fff;
+  -webkit-transition: all ease-in-out 250ms;
+  -o-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms; }
+
+.hamburger::before {
+  -webkit-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  transform: translateY(-6px); }
+
+.hamburger::after {
+  -webkit-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  transform: translateY(3px); }
+
+.hamburger.is-open {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+  .hamburger.is-open::after {
+    -webkit-transform: rotate(-90deg) translateX(2px);
+    -ms-transform: rotate(-90deg) translateX(2px);
+    transform: rotate(-90deg) translateX(2px); }
+  .hamburger.is-open::before {
+    opacity: 0; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -29,8 +129,9 @@ html {
    */
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400; }
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden; }
 
 /**
    * Add the correct display in IE 9-.
