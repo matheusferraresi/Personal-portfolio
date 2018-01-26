@@ -22,10 +22,11 @@
         font-size: 1em
         line-height: 1.5
 
-.about-left
-    float: left
-    width: 50%
-    margin-right: 2em
+@include mq
+    .about-left
+        float: left
+        width: 50%
+        margin-right: 2em
     
     
 .my-data-list
@@ -33,8 +34,11 @@
     display: grid
     grid-template-columns: minmax(5em, 10em) auto
     grid-gap: 1em
-    margin: 1em
+    margin: 1em 0
     color: $light-grey
+
+    @include mq
+        margin: 1em
 
     .list-title
         color: $dark-grey
