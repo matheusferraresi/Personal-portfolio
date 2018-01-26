@@ -8,9 +8,30 @@
     margin-bottom: 1em
     top: 0
     z-index: 10
+    transition: all ease-in-out 300ms
 
+    @include mq(62rem)
+        @include container($max-width: 70rem)
+        margin: 0 auto
+        background: transparent
+        padding: 2em 1em
+        position: relative
+        color: $accent
+        width: 100%
+        box-shadow: none
+
+        p
+            font-weight: $fw-b
+            
     p
         margin: 0
+
+.sticky
+    background: $white
+    position: fixed
+    padding: 1em
+    box-shadow: -5px 2px 8px 0 rgba(0,0,0,0.25)
+
 
 .nav-main
     position: absolute
@@ -25,11 +46,27 @@
     font-size: 0.9em
     box-shadow: -5px 5px 8px 0 rgba(0,0,0,0.25)
 
+    @include mq(62rem)
+        right: 0
+        top: -5%
+        opacity: 1
+        height: auto
+        background: transparent
+        box-shadow: none
+        width: auto
+
     ul
         @include unnordered-list
         display: flex
         flex-direction: column
         margin: 1.5em 0 0 2em !important
+
+        @include mq(62rem)
+            flex-direction: row
+            padding-right: 1em
+
+        &.sticky-ul
+            margin: 0.3em 0 0 2em !important  
 
     a
         width: auto
@@ -39,6 +76,10 @@
         opacity: .5
         text-decoration: none
         position: relative
+
+        @include mq(62rem)
+            color: $dark-grey
+            font-weight: $fw-n
 
         &::after
             margin-top: .5em
@@ -52,8 +93,14 @@
             transition: width 500ms
             width: 0
 
+            @include mq(62rem)
+                background: $accent
+
         &:hover
             opacity: 1
+            
+            @include mq(62rem)
+                color: $dark-grey
 
             &::after
                 width: 2em
@@ -71,6 +118,9 @@
     top: 0.5em
     cursor: pointer
 
+    @include mq(62rem)
+        display: none
+
 .hamburger, .hamburger::before, .hamburger::after
     content: ''
     display: block
@@ -78,12 +128,12 @@
     height: 3px
     background: $white
     transition: all ease-in-out 250ms
-
+    
 .hamburger::before
-    transform: translateY(-6px);
+    transform: translateY(-6px)
 
 .hamburger::after
-    transform: translateY(3px);
+    transform: translateY(3px)
 
 .hamburger.is-open
     transform: rotate(45deg)

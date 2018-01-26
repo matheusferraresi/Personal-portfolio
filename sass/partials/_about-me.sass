@@ -3,17 +3,30 @@
     color: $light-grey
     font-family: 'Roboto', serif
     font-weight: $fw-n
+    padding: 2em
+    
+    &:after
+        @include clearfix
 
     .subtitle
-    color: $dark-grey
-    font-size: 0.9em
-        
+        color: $dark-grey
+        font-size: 1.4rem
+        margin: 0.5em 0
+        display: block
+                
     span
         color: $accent
 
     p        
-        font-size: 1.1em
+        margin-top: 0
+        font-size: 1em
         line-height: 1.5
+
+.about-left
+    float: left
+    width: 50%
+    margin-right: 2em
+    
     
 .my-data-list
     @include unnordered-list

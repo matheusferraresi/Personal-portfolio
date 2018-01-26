@@ -10,9 +10,11 @@
 </head>
 <body id="home">
     <section class="header">
-        <p class="header-title">
-            Matheus Ferraresi
-        </p>
+        <div class="header-title-container">
+            <p>
+                Matheus Ferraresi
+            </p>
+        </div>
 
         <nav class="nav-main">
             <ul>
@@ -30,35 +32,43 @@
 
     <section class="hero">
         <img class="avatar" src="img/avatar.svg" alt="Matheus Ferraresi Avatar">
-        <h1 class="hero-title">Matheus Ferraresi</h1>
-        <ul class="hero-subtitle hero-subtitle--slider unordered-list">
-            <li><h3>Front End Developer</h3></li>
-            <!-- <li><h3>Web Designer</h3></li>
-            <li><h3>Back End Developer</h3></li> -->
-        </ul>
+        <div class="hero-sub-container">
+            <h1 class="hero-title">Matheus Ferraresi</h1>
+            <ul class="hero-subtitle hero-subtitle--slider unordered-list">
+                <li><h3>Front End Developer</h3></li>
+                <!-- <li><h3>Web Designer</h3></li>
+                <li><h3>Back End Developer</h3></li> -->
+            </ul>
 
-        <ul class="hero-social unordered-list">
-            <li><a href="https://github.com/matheusferraresi"><img src="img/github.svg" alt="github logo"></a></li>
-            <li><a href="https://codepen.io/matheusferraresi"><img src="img/codepen.svg" alt="codepen logo"></a></li>
-        </ul>
+            <ul class="hero-social unordered-list">
+                <li><a href="https://github.com/matheusferraresi"><img src="img/github.svg" alt="github logo"></a></li>
+                <li><a href="https://codepen.io/matheusferraresi"><img src="img/codepen.svg" alt="codepen logo"></a></li>
+            </ul>
+       </div>
+        
     </section>
 
     <section class="about-me">
         <h2 class="subtitle">About <span>Me</span></h2>
-        <p>Hello! I’m Matheus Ferraresi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum ullamcorper sem, at placerat dolor volutpat ac. Duis nulla enim, condimentum nec ultricies.</p>
-        <a href="" class="btn btn-main">download resume</a>
-
-        <ul class="my-data-list">
-            <li class="list-title">Age</li><li>24</li>
-            <li class="list-title">Residence</li><li>Edinburgh, UK</li>
-            <li class="list-title">E-mail</li><li><a href="mailto:matheusferraresi@live.com" target="_self">matheusferraresi@live.com</a></li>
-            <li class="list-title">Phone</li><li>+44 07960659176</li>
-        </ul>
+        
+        <div class="about-left">
+            <p>Hello! I’m Matheus Ferraresi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum ullamcorper sem, at placerat dolor volutpat ac. Duis nulla enim, condimentum nec ultricies.</p>
+            <a href="" class="btn">download resume</a>
+        </div>
+        
+        <div>
+            <ul class="my-data-list">
+                <li class="list-title">Age</li><li>24</li>
+                <li class="list-title">Residence</li><li>Edinburgh, UK</li>
+                <li class="list-title">E-mail</li><li><a href="mailto:matheusferraresi@live.com" target="_self">matheusferraresi@live.com</a></li>
+                <li class="list-title">Phone</li><li>+44 07960659176</li>
+            </ul>
+        </div>
     </section>
 
-    <section class="copyright">
+    <footer class="copyright">
         <p>© 2018 Handcoded by me :D</p>
-    </section>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>

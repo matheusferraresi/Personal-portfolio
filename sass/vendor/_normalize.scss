@@ -23,11 +23,12 @@
    */
   
   body {
-    margin: 0;
+    margin: 0 0 3.5em 0;
     font-family: $ff;
     font-weight: $fw-n;
     overflow-x: hidden;
     background: #F0F0F0;
+    position: relative
   }
   
   /**
