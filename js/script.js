@@ -13,20 +13,18 @@ navToggle.addEventListener('click', () => {
 });
 
 // Sticky menu on scroll
-if (!mq) {
-    window.addEventListener('scroll', () => {
-        let docScroll = document.documentElement.scrollTop;
-    
-        if (docScroll > 50) {
-            header.classList.add('sticky');
-            navMainUl.classList.add('sticky-ul');
-        } else {
-            header.classList.remove('sticky');
-            navMainUl.classList.remove('sticky-ul');
-            
-        }
-    })
-}
+window.addEventListener('scroll', () => {
+    let docScroll = document.documentElement.scrollTop;
+
+    if (docScroll > 50) {
+        header.classList.add('sticky');
+        navMainUl.classList.add('sticky-ul');
+    } else {
+        header.classList.remove('sticky');
+        navMainUl.classList.remove('sticky-ul');
+        
+    }
+})
 
 
 // Change active class on menu itens

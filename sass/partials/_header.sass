@@ -27,12 +27,13 @@
     p
         margin: 0
 
-.sticky
-    background: $white
-    position: fixed
-    padding: 1em
-    box-shadow: -5px 2px 8px 0 rgba(0,0,0,0.25)
-    max-width: 100%
+@include mq(62rem)
+    .sticky
+        background: $white
+        position: fixed
+        padding: 1em
+        box-shadow: -5px 2px 8px 0 rgba(0,0,0,0.25)
+        max-width: 100%
     
 
 
