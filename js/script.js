@@ -3,6 +3,7 @@ const navMain = document.querySelector('.nav-main')
 const navMainUl = document.querySelector('.nav-main ul')
 const hamburger = document.querySelector('.hamburger')
 const header = document.querySelector('.header')
+const menuLinks = document.querySelectorAll('nav [href]')
 
 // Menu hamburger toggle
 navToggle.addEventListener('click', () => {
@@ -23,3 +24,10 @@ window.addEventListener('scroll', () => {
         
     }
 })
+
+// Change active class on menu itens
+for (let i = 0; i < menuLinks.length; i++) {
+    if (menuLinks[i].href === window.location.href) {
+        menuLinks[i].classList.add('active');
+    }
+}

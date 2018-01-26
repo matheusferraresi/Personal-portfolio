@@ -165,12 +165,12 @@ footer {
       @media (min-width: 62rem) {
         .nav-main a::after {
           background: #2695F3; } }
-    .nav-main a:hover {
+    .nav-main a:hover, .nav-main a.active {
       opacity: 1; }
       @media (min-width: 62rem) {
-        .nav-main a:hover {
+        .nav-main a:hover, .nav-main a.active {
           color: #262626; } }
-      .nav-main a:hover::after {
+      .nav-main a:hover::after, .nav-main a.active::after {
         width: 2em;
         opacity: 1; }
   .nav-main.is-open {
