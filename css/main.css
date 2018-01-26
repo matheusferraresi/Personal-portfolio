@@ -61,7 +61,9 @@ footer {
   z-index: 10;
   -webkit-transition: all ease-in-out 300ms;
   -o-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms; }
+  transition: all ease-in-out 300ms;
+  -webkit-box-shadow: -5px 2px 8px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: -5px 2px 8px 0 rgba(0, 0, 0, 0.25); }
   @media (min-width: 62rem) {
     .header {
       width: 92%;
