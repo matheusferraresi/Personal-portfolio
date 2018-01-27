@@ -5,6 +5,7 @@ const hamburger = document.querySelector('.hamburger')
 const header = document.querySelector('.header')
 const mq = window.matchMedia( "(max-width: 990px)" )
 const menuLinks = document.querySelectorAll('nav [href]')
+const skillBars = document.querySelectorAll('.skillbar')
 
 // Menu hamburger toggle
 navToggle.addEventListener('click', () => {
@@ -16,7 +17,7 @@ navToggle.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
     let docScroll = document.documentElement.scrollTop;
 
-    if (docScroll > 50) {
+    if (docScroll > 5) {
         header.classList.add('sticky');
         navMainUl.classList.add('sticky-ul');
     } else {
@@ -32,4 +33,10 @@ for (let i = 0; i < menuLinks.length; i++) {
     if (menuLinks[i].href === window.location.href) {
         menuLinks[i].classList.add('active');
     }
+}
+
+// Skillbar widths based on data-percent atribute
+for (let i = 0; i < skillBars.length; i++) {
+    let width = skillBars[i].getAttribute('data-value')
+    skillBars[i].style.width = `${width}%`;
 }
