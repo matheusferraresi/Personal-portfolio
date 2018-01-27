@@ -6,6 +6,8 @@
     position: relative
     padding: 1em
     
+
+    
     @include mq
         flex-direction: row
 
@@ -37,8 +39,11 @@
 
 .hero-title
     text-align: center
-    font-size: 3em
-    margin-bottom: 0.6em
+    margin: 0.5em
+    
+    @include mq
+        font-size: 3em
+        margin: 0.67em 0
 
 .hero-subtitle
     @include unnordered-list
