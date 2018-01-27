@@ -28,7 +28,8 @@
     font-weight: $fw-n;
     overflow-x: hidden;
     background: #F0F0F0;
-    position: relative
+    position: relative;
+    min-height: 100vh;
   }
   
   /**

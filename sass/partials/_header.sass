@@ -1,25 +1,27 @@
 .header
     background: $accent
-    padding: 1em
     color: $white
     position: fixed
     width: 100%
     font-size: 1.2em
-    margin-bottom: 1em
     top: 0
     z-index: 10
     transition: all ease-in-out 300ms
     box-shadow: -5px 2px 8px 0 rgba(0,0,0,0.25)
+    padding: 1em
 
     @include mq(62rem)
         @include container($max-width: 70rem)
         margin: 0 auto
         background: transparent
-        padding: 2em 1em
+        padding: 1em
         position: relative
         color: $accent
         width: 100%
         box-shadow: none
+        display: flex
+        justify-content: space-between
+        align-items: center
 
         p
             font-weight: $fw-b
@@ -31,11 +33,12 @@
     .sticky
         background: $white
         position: fixed
-        padding: 1em
+        padding: 1em 5em
         box-shadow: -5px 2px 8px 0 rgba(0,0,0,0.25)
         max-width: 100%
-    
 
+    .header-title-container
+        padding-bottom: 0.6em
 
 .nav-main
     position: absolute
@@ -51,8 +54,7 @@
     box-shadow: -5px 5px 8px 0 rgba(0,0,0,0.25)
 
     @include mq(62rem)
-        right: 0
-        top: -5%
+        position: initial
         opacity: 1
         height: auto
         background: transparent
@@ -68,6 +70,7 @@
         @include mq(62rem)
             flex-direction: row
             padding-right: 1em
+            margin: 0 !important
 
         &.sticky-ul
             margin: 0.3em 0 0 2em !important
@@ -84,6 +87,7 @@
         @include mq(62rem)
             color: $dark-grey
             font-weight: $fw-n
+            padding-top: 0
 
         &::after
             margin-top: .5em
