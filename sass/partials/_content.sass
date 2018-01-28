@@ -5,6 +5,9 @@
     font-weight: $fw-n
     padding: 2em 1em
 
+    div:last-child
+        margin-bottom: 2em
+
     @include mq
         display: grid
         grid-template-columns: repeat(2, 1fr)
@@ -16,6 +19,9 @@
         font-size: 1.4rem
         margin: 0.5em 0
         flex-grow: 1
+    
+        &:first-of-type
+            margin-top: 1em
                 
     span
         color: $accent

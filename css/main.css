@@ -367,6 +367,8 @@ footer {
   font-family: 'Roboto', serif;
   font-weight: 400;
   padding: 2em 1em; }
+  .content div:last-child {
+    margin-bottom: 2em; }
   @media (min-width: 48em) {
     .content {
       display: grid;
@@ -380,6 +382,8 @@ footer {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1; }
+    .content .subtitle:first-of-type {
+      margin-top: 1em; }
   .content span {
     color: #2695F3; }
   .content p {
