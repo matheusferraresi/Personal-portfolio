@@ -30,13 +30,54 @@
 
     <section class="hero">
         <div class="hero-sub-container">
-            <h1 class="hero-title">Portfolio</h1>
+            <h1 class="hero-title">Contact</h1>
        </div>
-        
     </section>
 
     <section class="content">        
-        
+        <div>
+            <h2 class="subtitle">Get in <span>Touch</span></h2>
+
+            <ul class="social-list">
+                <li class="social-item"><div class="social-icon"><i class="fa fa-map-marker"></i></div>Edinburgh, UK</li>
+                <li class="social-item"><div class="social-icon"><i class="fa fa-envelope"></i></div>matheusferraresi@live.com</li>
+                <li class="social-item"><div class="social-icon"><i class="fa fa-phone"></i></div>+44 079 606 59176</li>
+                <li class="social-item"><div class="social-icon"><i class="fa fa-check"></i></div>Freelance Available</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="subtitle">Contact <span>Form</span></h2>
+
+            <form action="#" class="contact-form" method="post" id="contact_form">
+                <div class="controls">
+                    <div class="form-group">
+                        <i class="form-control-icon fa fa-user"></i>
+                        <label for="form_name">Full Name</label>
+                        <input id="form_name" type="text" name="name" class="form-control" required data-error="Name is required.">
+                        <div class="error-block"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="form-control-icon fa fa-envelope"></i>
+                        <label for="form_email">Email</label>
+                        <input id="form_email" type="email" name="email" class="form-control" required data-error="Valid email is required.">
+                        <div class="error-block"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="form-control-icon fa fa-envelope"></i>
+                        <label for="form_message">Message</label>
+                        <textarea name="form_message" id="form_message" rows="4" required data-error="Please, leave me a message."></textarea>
+                        <div class="error-block"></div>
+                    </div>
+                </div>
+
+                <!-- <input type="submit" value="Send message" class="btn btn--primary"> -->
+            </form>
+                <button class="btn btn--primary">Send Message</button>
+        </div>
+
     </section>
 
     <footer class="copyright">
@@ -44,5 +85,42 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        const inputs = document.querySelector('#contact_form').elements;
+
+        // Form script to check wich input is on focus and change the classes
+        Array.from(inputs).forEach(element => {
+            element.addEventListener('focus', () => {
+                element.parentNode.classList.add('focus')
+            })
+
+            element.addEventListener('blur', () => {
+                let errorBox = element.parentNode.lastElementChild;
+
+                if(element.value == 0 || element.value == null) {
+                    element.parentNode.classList.remove('focus')
+                    element.parentNode.classList.add('error')                    
+                } else if (element.id === 'form_email' && element.value != 0 && element.value != null ) {
+                    let emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+                    
+                    if (emailExp.test(element.value)) {
+                        element.parentNode.classList.remove('error')
+                        errorBox.classList.remove('show-error')
+                    } else {
+                        element.parentNode.classList.add('error')  
+                    }
+                } else {
+                    element.parentNode.classList.remove('error')
+                    errorBox.classList.remove('show-error')
+                }
+
+                if(element.parentNode.classList.contains('error')) {
+                    let errorMsg = element.getAttribute('data-error')
+                    errorBox.innerHTML = errorMsg
+                    errorBox.classList.add('show-error')
+                }
+            })
+        });
+    </script>
 </body>
 </html>

@@ -5,7 +5,7 @@
     font-weight: $fw-n
     padding: 2em 1em
 
-    div:last-child
+    > div
         margin-bottom: 2em
 
     @include mq
@@ -39,7 +39,7 @@
     text-align: center
 
 .my-data-list
-    @include unnordered-list
+    @include unstyled-list
     display: grid
     grid-template-columns: minmax(5em, 10em) auto
     grid-gap: 1em

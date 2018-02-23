@@ -27,7 +27,6 @@ window.addEventListener('scroll', () => {
     }
 })
 
-
 // Change active class on menu itens
 for (let i = 0; i < menuLinks.length; i++) {
     if (menuLinks[i].href === window.location.href) {
